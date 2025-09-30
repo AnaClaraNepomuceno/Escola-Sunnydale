@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5dc; /* Cor de pergaminho/bege claro */
+    color: #3d2b1f; /* Marrom escuro para o texto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: auto;
+    background-color: #fffaf0; /* Branco floral, um branco mais quente */
+    padding: 20px 40px;
+    border: 1px solid #ded8c0; /* Borda sutil cor de areia */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    min-height: 100vh;
+}
+
+h1, h2 {
+    font-family: 'Merriweather', serif;
+    color: #5C3317; /* Marrom escuro, cor de noz */
+    border-bottom: 2px solid #d2b48c; /* Cor tan/couro claro */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    text-shadow: none; /* Removendo sombra colorida */
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom-style: solid; /* Trocando de tracejado para sólido */
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-left: 8px solid #800000; /* Cor vinho/maroon para a borda */
+    font-size: 1.2em;
+    font-weight: normal; /* Fonte mais leve */
+    display: flex;
+    align-items: center;
+}
+
+li img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+li:nth-child(1),
+li:nth-child(2),
+li:nth-child(3) {
+    border-color: #800000; /* Cor vinho/maroon para todos */
+}
+
+/* Estilizando a seção de contato */
+h2:last-of-type {
+    color: #5C3317;
+    border-bottom-color: #d2b48c;
+}
+
+h2:last-of-type + p,
+h2:last-of-type + p + p {
+    background: #fdf5e6; /* Fundo "Old Lace" */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Estilos para os Flip Cards */
+.flip-card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 240px;
+    height: 320px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front {
+    background-color: #fff;
+    color: #5C3317;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.flip-card-front h3 {
+    margin: auto;
+    font-size: 1.4em;
+    font-family: 'Merriweather', serif;
+}
+
+.flip-card-back {
+    background-color: #5C3317; /* Marrom escuro */
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
